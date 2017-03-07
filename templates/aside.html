@@ -1,0 +1,43 @@
+<aside class="large-3 column aside_full_">
+    <div class="row">
+        <div class="column">
+            <div class="loading hide">
+                <a class="btn spin" href="#">Loading</a>
+            </div>
+            <ul class="no-bullet" id="aside_ads_">
+                <script id="tpl_aside_ads_" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li>
+                        <div class="img_">
+                            <a href="{{href}}" class="badge-evt" target="_blank">
+                                <img src="{{img}}" alt="#">
+                            </a>
+                        </div>
+                        {{#if title}}
+                        <div class="info_">
+                            <h3>
+                                <a href="{{href}}" class="" target="_blank">{{title}}</a>
+                            </h3>
+                        </div>
+                        {{else}}
+                        <div class="info_">
+                            <p>{{text}}</p>
+                        </div>
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+            <form action="" data-abide="ajax">
+                <div class="row">
+                    <input type="email" required placeholder="Enter your email address here..."/>
+                    <small class="error">Invalid email</small>
+                </div>
+                <div class="row">
+                    <button type="submit">subscribe</button>
+                </div>
+            </form>
+            <div class="alert-box alert">TODO Social buttons</div>
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// core
+@import "libs/variables";
+@import "libs/mixins";
+@import "libs/fonts";
+// foundation & normalize
+@import "foundation/settings";
+@import "foundation/normalize";
+@import "foundation/foundation";
+@import "foundation/buttons";
+@import "foundation/dropdown";
+@import "foundation/icon-bar";
+@import "foundation/forms";
+//common
+@import "libs/common";
+@import "sections/login_form";
+//total components
+@import "sections/main_navigation";
+@import "sections/footer";
+@import "sections/aside";
+@import "sections/list";
+@import "sections/new_post";
+//pages
+@import "sections/sign_up";
+@import "sections/settings";
+@import "sections/loginPage";
+@import "sections/pageNotFound";
+@import "sections/textpages";
+@import "sections/contact_us";
+@import "sections/profile";
+@import "sections/post";
+@import "sections/notification";
+@import "sections/reset";
+@import "sections/searchresults";
+
+// todo remove
+.logout_btn_ {
+  position: fixed;
+  left: 10px;
+  top: 100px;
+  z-index: 2000;
+}

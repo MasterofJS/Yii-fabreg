@@ -1,0 +1,279 @@
+.profile_page_ {
+  .main_head_ {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #292929;
+
+    .bg_personal_ {
+      &:hover {
+        .popover_ {
+          opacity: 1;
+
+        }
+      }
+      .fileinput-button {
+        display: block;
+        overflow: visible;
+      }
+      .action_ {
+        margin: ((73px - 25)/2) 40px;
+        position: relative;
+        @media (min-width: 1250px) {
+          margin: ((73px - 25)/2) 0;
+        }
+
+        i {
+          text-shadow: 0 2px 3px black;
+          color: white;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 25px;
+          display: inline-block;
+          &:before {
+            margin: 0;
+          }
+        }
+      }
+      .popover_ {
+        opacity: 0;
+        transition: opacity 0.3s;
+        border: 1px solid #fff;
+        position: absolute;
+        line-height: 31px;
+        width: 107px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        top: calc(100% + 10px);
+        left: -(107px/2) + 12;
+        background-color: #000000;
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border: 8px solid white;
+          border-top-width: 0;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          bottom: 100%;
+          left: calc(50% - 8px);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border: 7px solid black;
+          border-top-width: 0;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          bottom: 100%;
+          left: calc(50% - 7px);
+        }
+      }
+    }
+    .personal_ {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 383px;
+
+      html.no-flexboxlegacy & {
+        height: 383px;
+      }
+
+      .fileinput-button {
+        overflow: visible;
+      }
+      .img_ {
+        margin: 0 0 19px;
+      }
+
+      .name_ {
+        color: white;
+        font-weight: 700;
+        line-height: 25px;
+        margin: 0 0 13px;
+      }
+
+      .subtitle {
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0;
+      }
+
+      .fileupload_ {
+        width: 157px;
+        height: 157px;
+        position: relative;
+
+        .action_ {
+          opacity: 0;
+          position: absolute;
+          bottom: 9px;
+          left: calc(50% - #{rem-calc(27/2)});
+          width: rem-calc(27);
+          height: rem-calc(27);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          border-radius: 30px;
+
+          i {
+            color: white;
+            font-size: 14px;
+            line-height: 25px;
+          }
+        }
+        &.loading {
+          .picture_ {
+            &:before {
+              display: block;
+            }
+            .icon-spin6 {
+              display: inline-block;
+            }
+          }
+        }
+        &:hover {
+          .action_ {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .picture_ {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 1px solid $lightred;
+        border-radius: 200px;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-clip: content-box;
+        img {
+          min-height: 100%;
+          min-width: 100%;
+        }
+        .icon-spin6 {
+          display: none;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transform-origin: center;
+          &:before {
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //transform: translate(-50%, -50%);
+            //transform-origin: center;
+            margin: 0;
+          }
+        }
+      }
+
+      .alert-box {
+        padding-right: rem-calc(30);
+      }
+    }
+    .loader_ {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      color: white;
+      opacity: 0;
+      display: none;
+    }
+    &.loading {
+      .personal_ {
+        opacity: .1;
+      }
+      .loader_ {
+        opacity: 1;
+        display: block;
+      }
+    }
+    .save_changes_ {
+      position: absolute;
+      right: rem-calc(20);
+      bottom: rem-calc(20);
+      margin: 0;
+    }
+  }
+  .random_btn_ {
+    display: none;
+  }
+
+  .hide_upvotes_ {
+    background: #ccc;
+    height: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title_ {
+      color: #666;
+      margin: 0;
+    }
+  }
+}
+
+.profile_ {
+  .list_nav_ {
+    padding: rem-calc(40 0 20);
+    .button {
+      padding: rem-calc(7 20 6);
+      //margin-bottom: 0;
+      margin-bottom: rem-calc(10);
+      font-size: 14px;
+      line-height: 25px;
+      color: #999;
+      margin-right: 10px;
+      background-color: white;
+      border: 2px solid rgba(241, 241, 241, 0.59);
+      box-shadow: inset 0 -10px 7px rgba(0, 0, 0, 0.02);
+      &.active, &:hover {
+        color: white;
+        background-color: $orange;
+        border-color: $orange;
+      }
+      @media #{$small-only} {
+        width: calc(50% - 5px);
+        margin-right: 0;
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          margin-right: 10px;
+        }
+      }
+      @media (max-width: 380px) {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+    }
+    & + hr {
+      margin: 0;
+    }
+  }
+}

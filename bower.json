@@ -1,0 +1,16 @@
+{
+  "name": "Unicorno",
+  "version": "0.0.360",
+  "ignore": [],
+  "dependencies": {
+    "blueimp-file-upload": "~9.11.2",
+    "react-router": "~1.0.0",
+    "sticky-kit": "~1.1.2"
+  },
+  "devDependencies": {
+    "foundation": "~5.5.2",
+    "fancy-box": "https://github.com/fancyapps/fancyBox.git",
+    "slick-carousel": "https://github.com/kenwheeler/slick.git",
+    "jquery-form": "~3.46.0"
+  }
+}

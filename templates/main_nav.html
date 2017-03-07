@@ -1,0 +1,54 @@
+<div class="contain-to-grid fixed main_navigation_">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <a href="#"><img src="/dist/images/logo.svg" alt="Unicorno logo"></a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <div class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+                <li class="has-form">
+                    <form action="">
+                        <input type="text" placeholder="Enter your search here...">
+                        <button class="search_btn_ hidden-for-topbar"><i class="icon-search"></i></button>
+                    </form>
+                </li>
+                <li class="divider"></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Trending</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Fresh</a></li>
+                <li class="divider"></li>
+            </ul>
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li>
+                    <button class="search_btn_ visible-for-topbar"><i class="icon-search"></i></button>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">register</a></li>
+                <li class="login has-dropdown show-for-small-only">
+                    <a href="#">Login</a>
+                    <ul class="dropdown">
+                        <li>
+                            <div class="columns">
+                                //= modules/login
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="login hidden-for-small-only">
+                    <a href="#" data-dropdown="drop_login" aria-controls="drop_login" aria-expanded="false">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="drop_login" data-dropdown-content class="f-dropdown content" aria-hidden="true" aria-autoclose="false"
+     tabindex="-1">
+    //= modules/login
+</div>

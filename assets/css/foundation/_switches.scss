@@ -1,0 +1,25 @@
+      //.switch {
+      //  @include switch;
+      //
+      //  // Large radio switches
+      //  &.large { @include switch-size($switch-height-lrg); }
+      //
+      //  // Small radio switches
+      //  &.small { @include switch-size($switch-height-sml); }
+      //
+      //  // Tiny radio switches
+      //  &.tiny { @include switch-size($switch-height-tny); }
+      //
+      //  // Add a radius to the switch
+      //  &.radius {
+      //    label { @include radius(4px); }
+      //    label:after { @include radius(3px); }
+      //  }
+      //  //
+      //  //// Make the switch completely round, like a pill
+      //  &.round { @include radius(1000px);
+      //    label { @include radius(2rem); }
+      //    label:after { @include radius(2rem); }
+      //  }
+      //
+      //}

@@ -1,0 +1,230 @@
+.button {
+  &.facebook_ {
+    background-color: $facebook-bg;
+    &:hover, &:focus {
+      background-color: scale-color($facebook-bg, $lightness: $button-function-factor);
+    }
+  }
+  &.gplus_ {
+    background-color: $gplus-bg;
+    &:hover, &:focus {
+      background-color: scale-color($gplus-bg, $lightness: $button-function-factor);
+    }
+  }
+  &.twitter_ {
+    background-color: $twitter-bg;
+    &:hover, &:focus {
+      background-color: scale-color($twitter-bg, $lightness: $button-function-factor);
+    }
+  }
+  &.pinterest_ {
+    background-color: $pinterest-bg;
+    &:hover, &:focus {
+      background-color: scale-color($pinterest-bg, $lightness: $button-function-factor);
+    }
+  }
+}
+
+button, .button {
+  @include button-base;
+  @include button-size;
+  @include button-style;
+  text-transform: uppercase;
+
+  @include single-transition(background-color);
+
+  &.secondary {
+    @include button-style($bg: $secondary-button-bg-color, $bg-hover: $secondary-button-bg-hover, $border-color: $secondary-button-border-color);
+  }
+  //&.success {
+  //  @include button-style($bg: $success-button-bg-color, $bg-hover: $success-button-bg-hover, $border-color: $success-button-border-color);
+  //}
+  //&.alert {
+  //  @include button-style($bg: $alert-button-bg-color, $bg-hover: $alert-button-bg-hover, $border-color: $alert-button-border-color);
+  //}
+  //&.warning {
+  //  @include button-style($bg: $warning-button-bg-color, $bg-hover: $warning-button-bg-hover, $border-color: $warning-button-border-color);
+  //}
+  //&.info {
+  //  @include button-style($bg: $info-button-bg-color, $bg-hover: $info-button-bg-hover, $border-color: $info-button-border-color);
+  //}
+
+  //&.large {
+  //  @include button-size($padding: $button-lrg);
+  //}
+  //&.small {
+  //  @include button-size($padding: $button-sml);
+  //}
+  //&.tiny {
+  //  @include button-size($padding: $button-tny);
+  //}
+  &.expand {
+    @include button-size($full-width: true);
+  }
+
+  //&.left-align {
+  //  text-align: left;
+  //  text-indent: rem-calc(12);
+  //}
+  //&.right-align {
+  //  text-align: right;
+  //  padding-right: rem-calc(12);
+  //}
+
+  //&.radius {
+  //  @include button-style($bg: false, $radius: true);
+  //}
+  //&.round {
+  //  @include button-style($bg: false, $radius: $button-round);
+  //}
+
+  //&.disabled, &[disabled] {
+  //  @include button-style($bg: $button-bg-color, $disabled: true, $bg-hover: $button-bg-hover, $border-color: $button-border-color);
+  //  &.secondary {
+  //    @include button-style($bg: $secondary-button-bg-color, $disabled: true, $bg-hover: $secondary-button-bg-hover, $border-color: $secondary-button-border-color);
+  //  }
+  //  &.success {
+  //    @include button-style($bg: $success-button-bg-color, $disabled: true, $bg-hover: $success-button-bg-hover, $border-color: $success-button-border-color);
+  //  }
+  //  &.alert {
+  //    @include button-style($bg: $alert-button-bg-color, $disabled: true, $bg-hover: $alert-button-bg-hover, $border-color: $alert-button-border-color);
+  //  }
+  //  &.warning {
+  //    @include button-style($bg: $warning-button-bg-color, $disabled: true, $bg-hover: $warning-button-bg-hover, $border-color: $warning-button-border-color);
+  //  }
+  //  &.info {
+  //    @include button-style($bg: $info-button-bg-color, $disabled: true, $bg-hover: $info-button-bg-hover, $border-color: $info-button-border-color);
+  //  }
+  //}
+}
+
+//firefox 2px fix
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+@media #{$medium-up} {
+  button, .button {
+    @include button-base($style: false, $display: inline-block);
+    @include button-size($padding: false, $full-width: false);
+  }
+}
+
+// Social Buttons
+
+.split_.button {
+  $facebook-color: #3d5a95;
+  $google-color: #df4a32;
+
+  text-transform: none;
+  height: 39px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: rem-calc(5 23 6 3);
+  //padding-right: rem-calc(23);
+  //padding-left: rem-calc(3);
+  span:first-child {
+    display: inline-block;
+    width: 40px;
+    margin-right: rem-calc(10);
+    height: 100%;
+    font-size: rem-calc(20);
+    i {
+      vertical-align: middle;
+    }
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 1px;
+      height: 37px;
+      background-color: #fff;
+    }
+  }
+  &.facebook {
+    background: $facebook-color linear-gradient(to top, transparent 0%, transparent 100%);
+    border: 1px solid #203b71;
+    span:after {
+      background-color: #203b71;
+    }
+  }
+
+  &.gplus {
+    background: $google-color linear-gradient(to top, transparent 0%, transparent 100%);
+    border: 1px solid #ae1800;
+    border-radius: 3px;
+    span:after {
+      background-color: #ae1800;
+    }
+  }
+
+}
+
+.button-group {
+  @include button-group-container;
+
+  @for $i from 2 through 8 {
+    &.even-#{$i} li {
+      @include button-group-style($even: $i, $float: null);
+    }
+  }
+
+  > li {
+    @include button-group-style();
+  }
+
+  &.stack {
+    > li {
+      @include button-group-style($orientation: vertical);
+      float: none;
+    }
+  }
+
+  &.stack-for-small {
+    > li {
+      @include button-group-style($orientation: horizontal);
+      @media #{$small-only} {
+        @include button-group-style($orientation: vertical);
+        width: 100%;
+      }
+    }
+  }
+
+  //&.radius > * { @include button-group-style($radius:$button-radius, $float:null); }
+  //&.radius.stack > * { @include button-group-style($radius:$button-radius, $float:null, $orientation:vertical); }
+  //&.radius.stack-for-small > * {
+  //  @media #{$medium-up} {
+  //    @include button-group-style($radius:$button-radius, $orientation:horizontal);
+  //  }
+  //  @media #{$small-only} {
+  //    @include button-group-style($radius:$button-radius, $orientation:vertical);
+  //  }
+  //}
+  //
+  //&.round > * { @include button-group-style($radius:$button-round, $float:null); }
+  //&.round.stack > * { @include button-group-style($radius:$button-med, $float:null, $orientation:vertical); }
+  //&.round.stack-for-small > * {
+  //  @media #{$medium-up} {
+  //    @include button-group-style($radius:$button-round, $orientation:horizontal);
+  //  }
+  //  @media #{$small-only} {
+  //    @include button-group-style($radius:$button-med, $orientation:vertical);
+  //  }
+  //}
+}
+
+.button-bar {
+  width: 100%;
+  font-size: 0;
+  @include clearfix;
+  .button-group {
+    @include button-group-container($styles: false, $float: true);
+  }
+}

@@ -1,0 +1,24 @@
+select {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAASUlEQVQIW2OcNm2aEjMz810GHOD///+zGEFyM2fOTANRWNSd/fv3rytYEQ6FYAVZWVnv4YrQFMIVgMRRFEEVhv79+3cPyASYLQCoRSc6HzddrwAAAABJRU5ErkJggg==);
+  background-position: right 10px center;
+}
+
+form {
+  input, select, textarea {
+    font-weight: 700;
+  }
+  select {
+    font-size: 14px;
+  }
+  [type=checkbox] + label {
+    font-weight: 400;
+  }
+  label {
+    margin-bottom: rem-calc(10);
+    font-family: $font-family-sans-serif;
+    display: inline-block;
+  }
+  textarea {
+    resize: none;
+  }
+}

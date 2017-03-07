@@ -1,0 +1,134 @@
+.profile_form_ {
+  textarea {
+    min-height: rem-calc(173);
+    resize: none;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+    & {
+      &[type=number]::-webkit-inner-spin-button,
+      &[type=number]::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  .fileupload_ {
+    margin-bottom: 10px;
+    padding-right: 20px;
+    display: block;
+
+    input {
+      right: auto;
+      left: 0;
+      max-width: 250px;
+    }
+
+    .action_ {
+      float: left;
+      color: #09c;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 120px;
+      margin-left: 10px;
+    }
+
+    &.loading {
+      .picture_ {
+        &:before {
+          display: block;
+        }
+        .icon-spin6 {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .dropzone {
+    border: 5px transparent dashed;
+    border-left: 0;
+    &.dropover {
+      border: 5px #ccc dashed;
+    }
+
+  }
+
+  .alert-box {
+    float: left;
+    clear: both;
+    padding-right: rem-calc(30);
+  }
+
+  .picture_ {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid rgba(241, 241, 241, 0.59);
+    box-shadow: inset 0 -10px 7px rgba(0, 0, 0, 0.02);
+    float: left;
+    position: relative;
+    transition: all .3s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    &:before {
+      transition: all .3s;
+      content: '';
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .icon-spin6 {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 11.2px);
+      display: none;
+    }
+  }
+
+  .random_btn_ {
+    margin-bottom: rem-calc(20);
+
+    i {
+
+      &:before {
+        transform: rotate(0turn);
+      }
+
+      &.active:before {
+        animation: rotate 2s linear;
+      }
+    }
+  }
+}
+
+.sign_up_ {
+  button[type='submit'] {
+    min-width: rem-calc(169);
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: rem-calc(27);
+  }
+  .inline-list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+//@import '../libs/fileupload';
+@import '../libs/fileupload/jquery.fileupload.scss';
+@import '../libs/fileupload/jquery.fileupload-noscript.scss';

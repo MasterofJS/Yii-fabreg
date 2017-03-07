@@ -1,0 +1,33 @@
+// Site Footer
+.footer_ {
+  background-color: black;
+  ul.inline-list {
+    @media #{$small-only} {
+      margin-bottom: rem-calc(15);
+      text-align: center;
+      li {
+        float: none;
+        display: inline-block;
+      }
+    }
+  }
+  a {
+    color: white;
+    font-size: rem-calc(12);
+    font-weight: 600;
+    line-height: rem-calc(81 - 27 - 37);
+  }
+  .copy_ {
+    margin-top: rem-calc(27);
+    color: #919191;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: rem-calc(81 - 27 - 37);
+    @media #{$small-only} {
+      margin-top: 0;
+    }
+    @media #{$medium} {
+      float: right;
+    }
+  }
+}

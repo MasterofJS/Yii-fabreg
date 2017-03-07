@@ -1,0 +1,42 @@
+{
+    "name": "Unicorno",
+    "description": "Unicorno",
+    "keywords": ["yii2", "framework", "unicorno"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://bitbucket.org/bigdropinc/unicorno/src"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-imagine": "~2.0.0",
+        "yiisoft/yii2-authclient": "~2.0.0",
+        "hashids/hashids": "^1.0",
+        "kartik-v/yii2-grid": "~3.0",
+        "kartik-v/yii2-editable": "~1.0",
+        "gofmanaa/yii2-crontask": "~1.0",
+        "aws/aws-sdk-php": "2.5.2",
+        "nickcv/yii2-mandrill": "*",
+        "rackspace/php-opencloud": "~1.16"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

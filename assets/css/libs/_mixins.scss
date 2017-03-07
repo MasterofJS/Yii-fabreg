@@ -1,0 +1,24 @@
+@mixin ultra_thin() {
+  font-weight: 100;
+}
+
+@mixin thin() {
+  font-weight: 300;
+}
+
+@mixin regular() {
+  font-weight: 500;
+}
+
+@mixin bold() {
+  font-weight: 700;
+}
+
+@mixin Montserrat(){
+  font-family: $second-font-family;
+}
+
+@mixin text-overflow (){
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

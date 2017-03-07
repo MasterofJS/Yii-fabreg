@@ -1,0 +1,36 @@
+.page_not_found_ {
+  min-height: 400px;
+  @media #{$large} {
+    min-height: calc(100vh - 145px);
+  }
+  //background: transparent url(/dist/images/404.png) center bottom no-repeat;
+  background: transparent url(#{$path-images}/UnicornoPic.png) center 122% no-repeat;
+  background-size: auto 60%;
+  h1 {
+    color: #626262;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 25px 0 22px;
+    @media #{$large} {
+      font-size: 60px;
+      margin: 95px 0 22px;
+    }
+  }
+  h4 {
+    color: #999;
+    font-size: 24px;
+    margin: 0 0 15px;
+    line-height: 25px;
+    font-weight: 700;
+    @media #{$large} {
+
+      font-size: 18px;
+    }
+  }
+  p {
+    font-weight: 700;
+    color: #999;
+
+  }
+}

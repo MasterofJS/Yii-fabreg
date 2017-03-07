@@ -1,0 +1,45 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+
+# prevent directory listings
+Options -Indexes
+IndexIgnore */*
+
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+#<DirectoryMatch "^\.|\/\.">
+#    Order allow,deny
+#    Deny from all
+#</DirectoryMatch>
+
+php_value upload_max_filesize 8M
+php_value post_max_size 8M
+php_value memory_limit 256M
+
+# follow symbolic links
+Options FollowSymlinks
+RewriteEngine on
+#RewriteRule "(^|/)." - [F]
+
+#RewriteCond %{THE_REQUEST} ^.*/\.
+#RewriteRule ^(.*)$ - [R=404]
+
+
+RewriteRule ^backstage(/.+)?$ /backend/web/$1 [L,PT]
+RewriteRule ^(backstage)/$ /$1 [L,R=301]
+RewriteRule ^api(/.+)?$ /rest/web/$1 [L,PT]
+RewriteRule ^(api)/$ /$1 [L,R=301]
+RewriteRule ^(.+)?$ /frontend/web/$1
+
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^unicorno.com.br [NC]
+#RewriteRule ^(.*)$ http://www.unicorno.com.br/$1 [L,R=301]
+
+#Order Allow,Deny
+#Allow from all
+#Deny from 10.187.186.5
+

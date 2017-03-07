@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="dist/css/global.css"/>
+    <script src="dist/js/modernizr.js"></script>
+    <title>Unicorno</title>
+</head>
+<body>
+
+<div class="contain-to-grid fixed main_navigation_">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <a href="#"><img src="/dist/images/logo.svg" alt="Unicorno logo"></a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <div class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+                <li class="has-form">
+                    <form action="">
+                        <input type="text" placeholder="Enter your search here...">
+                        <button class="search_btn_ hidden-for-topbar"><i class="icon-search"></i></button>
+                    </form>
+                </li>
+                <li class="divider"></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Trending</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Fresh</a></li>
+                <li class="divider"></li>
+            </ul>
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li>
+                    <button class="search_btn_ visible-for-topbar"><i class="icon-search"></i></button>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">register</a></li>
+                <li class="login has-dropdown show-for-small-only">
+                    <a href="#">Login</a>
+                    <ul class="dropdown">
+                        <li>
+                            <div class="columns">
+                                <form action="" class="login_form_" data-abide>
+                                    <div class="row_ collapse merge_fields_">
+                                        <div class="small-12 columns">
+                                            <input type="email" required placeholder="Your Email"/>
+                                            <small class="error">An email address is required.</small>
+                                        </div>
+                                        <div class="small-2 columns">
+                                            <span class="postfix"><i class="icon-email"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="row_ collapse merge_fields_">
+                                        <div class="small-12 columns">
+                                            <input type="password" id="password" required pattern="[a-zA-Z]+" placeholder="Password" />
+                                            <small class="error">Your password must match the requirements</small>
+                                        </div>
+                                        <div class="small-2 columns">
+                                            <span class="postfix"><i class="icon-lock"></i></span>
+                                        </div>
+                                        <div class="small-12 columns">
+                                            <a href="#" class="right" tabindex="-1">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="row_ collapse">
+                                        <div class="columns">
+                                            <input type="submit" class="button expand" value="Login"/>
+                                        </div>
+                                    </div>
+                                    <div class="row_ collapse">
+                                        <p class="text-center">Or login with</p>
+                                        <div class="social-row_">
+                                            <a class="item button facebook">
+                                                <i class="icon-facebook"></i>
+                                            </a>
+                                            <a class="item button gplus">
+                                                <i class="icon-gplus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="login hidden-for-small-only">
+                    <a href="#" data-dropdown="drop_login" aria-controls="drop_login" aria-expanded="false">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="drop_login" data-dropdown-content class="f-dropdown content" aria-hidden="true" aria-autoclose="false"
+     tabindex="-1">
+    <form action="" class="login_form_" data-abide>
+        <div class="row_ collapse merge_fields_">
+            <div class="small-12 columns">
+                <input type="email" required placeholder="Your Email"/>
+                <small class="error">An email address is required.</small>
+            </div>
+            <div class="small-2 columns">
+                <span class="postfix"><i class="icon-email"></i></span>
+            </div>
+        </div>
+        <div class="row_ collapse merge_fields_">
+            <div class="small-12 columns">
+                <input type="password" id="password" required pattern="[a-zA-Z]+" placeholder="Password" />
+                <small class="error">Your password must match the requirements</small>
+            </div>
+            <div class="small-2 columns">
+                <span class="postfix"><i class="icon-lock"></i></span>
+            </div>
+            <div class="small-12 columns">
+                <a href="#" class="right" tabindex="-1">Forgot password?</a>
+            </div>
+        </div>
+        <div class="row_ collapse">
+            <div class="columns">
+                <input type="submit" class="button expand" value="Login"/>
+            </div>
+        </div>
+        <div class="row_ collapse">
+            <p class="text-center">Or login with</p>
+            <div class="social-row_">
+                <a class="item button facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a class="item button gplus">
+                    <i class="icon-gplus"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="total_wrap_">
+
+    <div class="row">
+        <div class="column large-6">
+<form action="" class="login_form_" data-abide>
+    <div class="row_ collapse merge_fields_">
+        <div class="small-12 columns">
+            <input type="email" required placeholder="Your Email"/>
+            <small class="error">An email address is required.</small>
+        </div>
+        <div class="small-2 columns">
+            <span class="postfix"><i class="icon-email"></i></span>
+        </div>
+    </div>
+    <div class="row_ collapse merge_fields_">
+        <div class="small-12 columns">
+            <input type="password" id="password" required pattern="[a-zA-Z]+" placeholder="Password" />
+            <small class="error">Your password must match the requirements</small>
+        </div>
+        <div class="small-2 columns">
+            <span class="postfix"><i class="icon-lock"></i></span>
+        </div>
+        <div class="small-12 columns">
+            <a href="#" class="right" tabindex="-1">Forgot password?</a>
+        </div>
+    </div>
+    <div class="row_ collapse">
+        <div class="columns">
+            <input type="submit" class="button expand" value="Login"/>
+        </div>
+    </div>
+    <div class="row_ collapse">
+        <p class="text-center">Or login with</p>
+        <div class="social-row_">
+            <a class="item button facebook">
+                <i class="icon-facebook"></i>
+            </a>
+            <a class="item button gplus">
+                <i class="icon-gplus"></i>
+            </a>
+        </div>
+    </div>
+</form>
+            </div>
+        <div class="column">
+
+
+            <button>btn</button>
+            <button class="expand">btn</button>
+
+            <h2>Alert Boxes</h2>
+            <div data-alert class="alert-box success radius">
+                This is a success alert with a radius.
+                <a href="#" class="close">&times;</a>
+            </div>
+
+            <div data-alert class="alert-box warning round">
+                This is a warning alert that is rounded.
+                <a href="#" class="close">&times;</a>
+            </div>
+
+            <div data-alert class="alert-box info radius">
+                This is an info alert with a radius.
+                <a href="#" class="close">&times;</a>
+            </div>
+
+            <div data-alert class="alert-box alert round">
+                This is an alert - alert that is rounded.
+                <a href="#" class="close">&times;</a>
+            </div>
+
+            <div data-alert class="alert-box secondary">
+                This is a secondary alert.
+                <a href="#" class="close">&times;</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda aut deserunt dolorem ea enim
+                excepturi hic libero maiores molestias odio porro quisquam quod saepe, sequi similique tenetur ut
+                velit?</p>
+
+            <p>Accusamus at, autem delectus deserunt facere ipsum nemo temporibus voluptatem! Autem cumque delectus
+                doloremque eaque enim facere harum impedit labore magnam maxime, molestiae natus nihil quis recusandae
+                tempora ullam voluptas.</p>
+
+            <p>Aut blanditiis cumque dolorum ducimus ea eius est et ipsam, minima modi nobis nostrum, officia possimus
+                praesentium quae quas quidem reiciendis sapiente, sequi sint. Enim iure magnam nam quasi veniam.</p>
+
+            <p>Ad architecto asperiores deleniti eius hic ipsum laborum libero maxime minus officiis quod, saepe, velit
+                vero. Culpa eius exercitationem explicabo, inventore provident sequi voluptas. Incidunt laborum mollitia
+                totam veniam voluptatum.</p>
+
+            <p>Amet, beatae doloribus enim, esse ipsa iusto nemo nulla praesentium provident quisquam repudiandae ut!
+                Beatae deserunt distinctio illum in iste iure minus molestias nihil, nostrum odit, perferendis quas,
+                quos voluptatum?</p>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer_">
+        <div class="row">
+            <div class="medium-6 column">
+                <ul class="inline-list">
+                    <li><a href="#">Term</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy & Safety</a></li>
+                    <li><a href="#">Send feedback</a></li>
+                </ul>
+            </div>
+            <div class="medium-6 column">
+                <p class="copy_ small-only-text-center">&copy; 2015 Unicorno.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="dist/js/build.js"></script>
+</body>
+</html>

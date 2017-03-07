@@ -1,0 +1,54 @@
+.login_form_ {
+  a.right {
+    color: $orange;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  .dropdown & {
+    .social-row_ {
+      .item {
+        margin-bottom: rem-calc(15);
+      }
+    }
+  }
+  .f-dropdown &,
+  .dropdown & {
+    input {
+      margin-bottom: 10px;
+      &[type='submit'] {
+        margin-bottom: 14px;
+      }
+    }
+    [data-abide] .error {
+      input {
+        margin-bottom: 0;
+      }
+      small.error {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .row_ {
+    &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+    &.collapse {
+      > .columns {
+        padding: 0;
+      }
+    }
+  }
+}
+
