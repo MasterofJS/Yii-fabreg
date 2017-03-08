@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:https://www.unicorno.com.br/backstage/
+Sitemap: https://unicorno.com.br/sitemap.xml

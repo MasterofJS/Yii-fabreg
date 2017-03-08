@@ -1,0 +1,12 @@
+# prevent directory listings
+Options -Indexes
+IndexIgnore */*
+
+# follow symbolic links
+Options FollowSymlinks
+RewriteEngine on
+RewriteRule ^backstage(/.+)?$ /backend/web/$1 [L,PT]
+RewriteRule ^(backstage)/$ /$1 [L,R=301]
+RewriteRule ^api(/.+)?$ /rest/web/$1 [L,PT]
+RewriteRule ^(api)/$ /$1 [L,R=301]
+RewriteRule ^(.+)?$ /frontend/web/$1

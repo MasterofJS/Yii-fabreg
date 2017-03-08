@@ -1,0 +1,30 @@
+<?php
+return [
+    'class' => '\yii\web\UrlManager',
+    'enablePrettyUrl' => true,
+    'showScriptName' => false,
+    'enableStrictParsing' => true,
+    'baseUrl' => '/',
+    'rules' => [
+        '/<level1:user>/<level2:[a-z][0-9a-z-]+>/<level3:posts>' => 'site/index',
+        '/<level1:user>/<level2:[a-z][0-9a-z-]+>/<level3:likes>' => 'site/index',
+        '/<level1:user>/<level2:[a-z][0-9a-z-]+>/<level3:comments>' => 'site/index',
+        '/<level1:user>/<level2:[a-z][0-9a-z-]+>' => 'site/index',
+        '/<level1:posts>/<level2:[a-zA-Z0-9]+>' => 'site/index',
+        '/<level1:fresh>' => 'site/index',
+        '/<level1:trending>' => 'site/index',
+        '/<level1:search>' => 'site/index',
+        '/<level1:login>' => 'site/index',
+        '/<level1:signup>' => 'site/index',
+        '/<level1:notifications>' => 'site/index',
+        '/<level1:settings>/<level2:(account|password|profile|delete)>' => 'site/index',
+        '/<level1:terms>' => 'site/index',
+        '/<level1:privacy>' => 'site/index',
+        '/<level1:contact>' => 'site/index',
+        '/<level1:forgot>' => 'site/index',
+        '/<level1:reset-password>' => 'site/index',
+        '/<level1:confirm-email>' => 'site/index',
+        '/' => 'site/index',
+        '/oauth/<provider:(google|facebook)>' => 'oauth/index'
+    ],
+];
